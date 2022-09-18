@@ -12,13 +12,13 @@ public class Estudiante {
     private long numero_telefono;
     private String tipo_sangre;
     private ProgramaAcademico programa_academico;
-    private Profesor tutor;
+    private String tutor;
     private List<Grupo> grupos;
     private InformacionFinanciera info_financiera;
 
 
     public Estudiante(String nombre,String apellido, int documento, int codigo, String direccion, long numero_telefono, String tipo_sangre,
-                      Profesor tutor,List<Grupo> grupos, InformacionFinanciera info_financiera){
+                      String tutor,List<Grupo> grupos, InformacionFinanciera info_financiera){
         this.setNombre(nombre);
         this.setApellido(apellido);
         this.setDocumento(documento);
@@ -97,11 +97,11 @@ public class Estudiante {
         this.programa_academico = programa_academico;
     }
 
-    public Profesor getTutor() {
+    public String getTutor() {
         return tutor;
     }
 
-        public void setTutor(Profesor tutor) {
+        public void setTutor(String tutor) {
             this.tutor = tutor;
     }
 
@@ -135,12 +135,8 @@ public class Estudiante {
                 "'\nprograma_academico= " + programa_academico +
                 "\ntutor= " + tutor +
                 "\ngrupos= " + grupos +
-<<<<<<< HEAD
+
                 "\ninfo_financiera= " + info_financiera +
                 '}';
-=======
-                "\ninfo_financiera= " + info_financiera +"}";
-
->>>>>>> 5e27c94e7fa08e77e36561b629f753f497c6b9ac
     }
 }

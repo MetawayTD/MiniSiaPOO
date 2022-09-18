@@ -8,30 +8,59 @@ import java.util.List;
 import Data.Estudiante;
 
 public class MiniSia {
-
         public static void main(String[] args){
-                String direccion_martin = "Cra 94 B #42F 46 SUR";
-
-                Estudiante martin = new Estudiante("Martin","Moreno",1034657217,00000,direccion_martin,3103017732l,
-                        "O+",null,null,null);
-
-                ArrayList<String> titulos_jose = new ArrayList<String>();
-                titulos_jose.add("Pregrado en ingenieria de sistemas");
-                titulos_jose.add("Doctorado en redes");
-
-                Profesor Jose = new Profesor("Jose","Jose",1111,titulos_jose,"Planta","Aulas de ingenieria 233",
+                Profesor armando = new Profesor("Armando","Villamil",55888,null,"Profesor de planta","FEM 205",
                         null,null);
-                /*
-                System.out.println(martin);
-                System.out.println(Jose);
+                Estudiante martin = new Estudiante("Martin","Moreno",1034657217,170144,"Cra 94B#42F-46SUR",3103017732l,
+                "O+",armando.getNombre()+" "+armando.getApellido(),null,null);
+                        Estudiante gabriel = new Estudiante("Gabriel","Fonseca",100078889,144786,"Calle 100#55-40",31478869922l,
+                "A+",null,null,null);
 
                 UI.bienvedida();
                 UI.menu();
-                UI.seleccionar();
+                int seleccion = UI.seleccionar();
+                switch (seleccion){
+                        case 1:
+                                UI.menu_estudiante();
+                                break;
+                        case 2:
+                                UI.menu_profesor();
+                                break;
+                        case 3:
+                                UI.menu_grupo();
+                                break;
+                        case 4:
+                                UI.menu_materia();
+                                break;
+                        case 5:
+                                UI.menu_programa_academico();
+                                break;
+                        case 6:
+                                UI.menu_horario();
+                                break;
+                        case 7:
+                                UI.menu_info_financiera();
+                                break;
+                        default:
+                                UI.error();
+                }
+                int segunda_seleccion = UI.seleccionar();
 
-                 */
-                UI.imprimir_estudiante(martin);
+                if(seleccion == 1){
+                        switch (segunda_seleccion){
+                                case 1:
+                                        UI.imprimir_estudiante(martin);
+                                        break;
+                                case 2:
+                                        UI.imprimir_estudiante(gabriel);
+                                        break;
+                                default:
+                                        UI.error();
+                        }
                 }
 
+
         }
+
+}
 

@@ -93,14 +93,14 @@ public class Profesor {
     @Override
     public String toString() {
         return "Profesor{" +
-                "nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", codigo=" + codigo +
-                ", titulos=" + titulos +
-                ", categoria='" + categoria + '\'' +
-                ", ubicacion_oficina='" + ubicacion_oficina + '\'' +
-                ", encargados=" + encargados +
-                ", grupos_a_cargo=" + grupos_a_cargo +
+                "\nnombre='" + nombre +
+                "\napellido='" + apellido +
+                "\ncodigo=" + codigo +
+                "\ntitulos=" + titulos +
+                "\ncategoria='" + categoria +
+                "\nubicacion_oficina='" + ubicacion_oficina +
+                "\nencargados=" + encargados +
+                "\ngrupos_a_cargo=" + grupos_a_cargo +
                 '}';
     }
 }

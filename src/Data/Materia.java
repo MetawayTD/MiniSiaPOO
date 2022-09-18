@@ -63,11 +63,11 @@ public class Materia {
     @Override
     public String toString() {
         return "Materia{" +
-                "nombre='" + nombre + '\'' +
-                ", numero_creditos=" + numero_creditos +
-                ", prerrequisitos=" + prerrequisitos +
-                ", temas=" + temas +
-                ", grupos=" + grupos +
+                "\nnombre=' " + nombre +
+                "\nnumero_creditos= " + numero_creditos +
+                "\nprerrequisitos= " + prerrequisitos +
+                "\ntemas= " + temas +
+                "\ngrupos= " + grupos +
                 '}';
     }
 }

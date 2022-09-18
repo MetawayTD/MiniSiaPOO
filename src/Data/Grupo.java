@@ -75,13 +75,13 @@ public class Grupo {
     @Override
     public String toString() {
         return "Grupo{" +
-                "numero=" + numero +
-                ", carga_horaria=" + carga_horaria +
-                ", cantidad_estudiantes=" + cantidad_estudiantes +
-                ", materia=" + materia +
-                ", lista_estudiantes=" + lista_estudiantes +
-                ", profesor=" + profesor +
-                ", horario=" + horario +
+                "\nnumero= " + numero +
+                "\ncarga_horaria= " + carga_horaria +
+                "\ncantidad_estudiantes= " + cantidad_estudiantes +
+                "\nmateria= " + materia +
+                "\nlista_estudiantes= " + lista_estudiantes +
+                "\nprofesor= " + profesor +
+                "\nhorario= " + horario +
                 '}';
     }
 }

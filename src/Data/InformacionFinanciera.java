@@ -52,10 +52,10 @@ public class InformacionFinanciera {
     @Override
     public String toString() {
         return "InformacionFinanciera{" +
-                "periodo_academico='" + periodo_academico + '\'' +
-                ", estado_cuenta='" + estado_cuenta + '\'' +
-                ", recibo_pago=" + recibo_pago +
-                ", estudiante=" + estudiante +
+                "\nperiodo_academico= '" + periodo_academico +
+                "\nestado_cuenta= '" + estado_cuenta +
+                "\nrecibo_pago= " + recibo_pago +
+                "\nestudiante= " + estudiante +
                 '}';
     }
 }

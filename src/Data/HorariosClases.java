@@ -42,9 +42,9 @@ public class HorariosClases {
     @Override
     public String toString() {
         return "HorariosClases{" +
-                "dias=" + Arrays.toString(dias) +
-                ", horas=" + Arrays.toString(horas) +
-                ", grupos=" + grupos +
+                "\ndias= " + Arrays.toString(dias) +
+                "\nhoras= " + Arrays.toString(horas) +
+                "\ngrupos= " + grupos +
                 '}';
     }
 }

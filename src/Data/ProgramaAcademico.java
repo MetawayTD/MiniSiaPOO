@@ -90,14 +90,14 @@ public class ProgramaAcademico {
     @Override
     public String toString() {
         return "ProgramaAcademico{" +
-                "pregrado=" + pregrado +
-                ", maestria=" + maestria +
-                ", especializacion=" + especializacion +
-                ", doctorado=" + doctorado +
-                ", codigo=" + codigo +
-                ", nombre='" + nombre + '\'' +
-                ", semestres=" + semestres +
-                ", estudiante=" + estudiante +
+                "\npregrado=" + pregrado +
+                "\nmaestria=" + maestria +
+                "\nespecializacion=" + especializacion +
+                "\ndoctorado=" + doctorado +
+                "\ncodigo=" + codigo +
+                "\nnombre='" + nombre +
+                "\nsemestres=" + semestres +
+                "\nestudiante=" + estudiante +
                 '}';
     }
 }

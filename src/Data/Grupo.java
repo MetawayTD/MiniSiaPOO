@@ -62,7 +62,16 @@ public class Grupo {
         this.horario = horario;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Grupo{" +
+                "numero=" + numero +
+                ", carga_horaria=" + carga_horaria +
+                ", cantidad_estudiantes=" + cantidad_estudiantes +
+                ", materia=" + materia +
+                ", lista_estudiantes=" + lista_estudiantes +
+                ", profesor=" + profesor +
+                ", horario=" + horario +
+                '}';
+    }
 }

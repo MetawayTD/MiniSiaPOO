@@ -39,5 +39,13 @@ public class InformacionFinanciera {
         this.estudiante = estudiante;
     }
 
-
+    @Override
+    public String toString() {
+        return "InformacionFinanciera{" +
+                "periodo_academico='" + periodo_academico + '\'' +
+                ", estado_cuenta='" + estado_cuenta + '\'' +
+                ", recibo_pago=" + recibo_pago +
+                ", estudiante=" + estudiante +
+                '}';
+    }
 }

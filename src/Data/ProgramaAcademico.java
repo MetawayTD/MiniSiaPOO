@@ -76,8 +76,18 @@ public class ProgramaAcademico {
         this.estudiante = estudiante;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "ProgramaAcademico{" +
+                "pregrado=" + pregrado +
+                ", maestria=" + maestria +
+                ", especializacion=" + especializacion +
+                ", doctorado=" + doctorado +
+                ", codigo=" + codigo +
+                ", nombre='" + nombre + '\'' +
+                ", semestres=" + semestres +
+                ", estudiante=" + estudiante +
+                '}';
+    }
 }
 

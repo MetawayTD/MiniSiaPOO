@@ -78,7 +78,18 @@ public class Profesor {
         this.grupos_a_cargo = grupos_a_cargo;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Profesor{" +
+                "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", codigo=" + codigo +
+                ", titulos=" + titulos +
+                ", categoria='" + categoria + '\'' +
+                ", ubicacion_oficina='" + ubicacion_oficina + '\'' +
+                ", encargados=" + encargados +
+                ", grupos_a_cargo=" + grupos_a_cargo +
+                '}';
+    }
 }
 

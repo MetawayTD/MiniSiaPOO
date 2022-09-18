@@ -1,4 +1,5 @@
 package Data;
+import java.util.Arrays;
 import java.util.List;
 
 public class HorariosClases {
@@ -31,5 +32,13 @@ public class HorariosClases {
         this.grupos = grupos;
     }
 
+    @Override
+    public String toString() {
+        return "HorariosClases{" +
+                "dias=" + Arrays.toString(dias) +
+                ", horas=" + Arrays.toString(horas) +
+                ", grupos=" + grupos +
+                '}';
+    }
 }
 

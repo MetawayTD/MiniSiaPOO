@@ -1,4 +1,5 @@
 package Data;
+import java.util.Arrays;
 import java.util.List;
 
 public class Estudiante {
@@ -112,4 +113,12 @@ public class Estudiante {
         this.info_financiera = info_financiera;
     }
 
+    @Override
+    public String toString() {
+        return "Estudiante{" + "nombre='" + nombre + '\'' + ", apellido='" + apellido + '\'' + ", documento=" + documento +
+                ", codigo=" + codigo + ", direccion='" + direccion + '\'' + ", notas=" + Arrays.toString(notas) + ", numero_telefono=" + numero_telefono +
+                ", tipo_sangre='" + tipo_sangre + '\'' + ", programa_academico=" + programa_academico + ", tutor=" + tutor +
+                ", grupos=" + grupos + ", info_financiera=" + info_financiera +
+                '}';
+    }
 }

@@ -19,15 +19,16 @@ public class MiniSia {
 
                 Profesor Jose = new Profesor("Jose","Jose",1111,titulos_jose,"Planta","Aulas de ingenieria 233",
                         null,null);
-
+                /*
                 System.out.println(martin);
                 System.out.println(Jose);
-                /*
+
                 UI.bienvedida();
                 UI.menu();
                 UI.seleccionar();
 
                  */
+                UI.imprimir_estudiante(martin);
                 }
 
         }

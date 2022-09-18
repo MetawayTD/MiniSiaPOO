@@ -16,6 +16,7 @@ public class Estudiante {
     private List<Grupo> grupos;
     private InformacionFinanciera info_financiera;
 
+
     public Estudiante(String nombre,String apellido, int documento, int codigo, String direccion, long numero_telefono, String tipo_sangre,
                       Profesor tutor,List<Grupo> grupos, InformacionFinanciera info_financiera){
         this.setNombre(nombre);
@@ -71,7 +72,6 @@ public class Estudiante {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-
 
     public long getNumero_telefono() {
         return numero_telefono;
@@ -135,7 +135,7 @@ public class Estudiante {
                 "'\nprograma_academico= " + programa_academico +
                 "\ntutor= " + tutor +
                 "\ngrupos= " + grupos +
-                "\ninfo_financiera= " + info_financiera +
-                '}';
+                "\ninfo_financiera= " + info_financiera +"}";
+
     }
 }

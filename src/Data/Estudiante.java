@@ -135,7 +135,12 @@ public class Estudiante {
                 "'\nprograma_academico= " + programa_academico +
                 "\ntutor= " + tutor +
                 "\ngrupos= " + grupos +
+<<<<<<< HEAD
                 "\ninfo_financiera= " + info_financiera +
                 '}';
+=======
+                "\ninfo_financiera= " + info_financiera +"}";
+
+>>>>>>> 5e27c94e7fa08e77e36561b629f753f497c6b9ac
     }
 }

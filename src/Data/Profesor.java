@@ -1,5 +1,6 @@
 package Data;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Profesor {
@@ -7,13 +8,13 @@ public class Profesor {
     private String nombre;
     private String apellido;
     private int codigo;
-    private List<String> titulos;
+    private ArrayList<String> titulos;
     private String categoria;
     private String ubicacion_oficina;
     private List<Estudiante> encargados;
     private List<Grupo> grupos_a_cargo;
 
-    public Profesor(String nombre, String apellido, int codigo, List<String> titulos, String categoria, String ubicacion_oficina,
+    public Profesor(String nombre, String apellido, int codigo, ArrayList<String> titulos, String categoria, String ubicacion_oficina,
                     List<Estudiante> encargados, List<Grupo> grupos_a_cargo) {
         this.setNombre(nombre);
         this.setApellido(apellido);
@@ -54,7 +55,7 @@ public class Profesor {
         return titulos;
     }
 
-    public void setTitulos(List<String> titulos) {
+    public void setTitulos(ArrayList<String> titulos) {
         this.titulos = titulos;
     }
 

@@ -9,7 +9,6 @@ public class Estudiante {
     private int documento;
     private int codigo;
     private String direccion;
-    private double [] notas;
     private long numero_telefono;
     private String tipo_sangre;
     private ProgramaAcademico programa_academico;
@@ -17,14 +16,13 @@ public class Estudiante {
     private List<Grupo> grupos;
     private InformacionFinanciera info_financiera;
 
-    public Estudiante(String nombre,String apellido, int documento, int codigo, String direccion, double [] notas, long numero_telefono, String tipo_sangre,
+    public Estudiante(String nombre,String apellido, int documento, int codigo, String direccion,long numero_telefono, String tipo_sangre,
                       Profesor tutor,List<Grupo> grupos, InformacionFinanciera info_financiera){
         this.setNombre(nombre);
         this.setApellido(apellido);
         this.setDocumento(documento);
         this.setCodigo(codigo);
         this.setDireccion(direccion);
-        this.setNotas(notas);
         this.setNumero_telefono(numero_telefono);
         this.setTipo_sangre(tipo_sangre);
         this.setTutor(tutor);
@@ -72,14 +70,6 @@ public class Estudiante {
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
-    }
-
-    public double [] getNotas() {
-        return notas;
-    }
-
-    public void setNotas(double [] notas) {
-        this.notas = notas;
     }
 
     public long getNumero_telefono() {
@@ -134,7 +124,7 @@ public class Estudiante {
     @Override
     public String toString() {
         return "Estudiante{" + "nombre='" + nombre + '\'' + ", apellido='" + apellido + '\'' + ", documento=" + documento +
-                ", codigo=" + codigo + ", direccion='" + direccion + '\'' + ", notas=" + Arrays.toString(notas) + ", numero_telefono=" + numero_telefono +
+                ", codigo=" + codigo + ", direccion='" + direccion + '\'' + ", notas=" +", numero_telefono=" + numero_telefono +
                 ", tipo_sangre='" + tipo_sangre + '\'' + ", programa_academico=" + programa_academico + ", tutor=" + tutor +
                 ", grupos=" + grupos + ", info_financiera=" + info_financiera +
                 '}';

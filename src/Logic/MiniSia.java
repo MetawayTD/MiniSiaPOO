@@ -11,21 +11,25 @@ public class MiniSia {
         public static void main(String[] args){
                 Profesor armando = new Profesor("Armando","Villamil",55888,null,"Profesor de planta","FEM 205",
                         null,null);
-                Profesor jose = new Profesor(null,null,0,null,null,null,null,null);
+                Profesor jose = new Profesor("Jose","Jose",114585,null,"Profesor becario",
+                        "Aulas de ingeniera 453 201",null,null);
 
-                Grupo grupo1 = new Grupo(0,0,0,null,null,null,null);
-                Grupo grupo2 = new Grupo(0,0,0,null,null,null,null);
+                Grupo grupo1 = new Grupo(1,4,10,null,null,armando.getNombre()+" "+armando.getApellido()
+                        ,null);
+                Grupo grupo2 = new Grupo(2,6,5,null,null,jose.getNombre()+" "+jose.getApellido()
+                        ,null);
 
-                Materia algebra_lineal = new Materia(null,0,null,null,null);
-                Materia programacion_orientada_a_objetos = new Materia(null,0,null,null,null);
+                Materia algebra_lineal = new Materia("Álgebra lineal",4,null,null,null);
+                Materia programacion_orientada_a_objetos = new Materia("Programación orientada a objetos",4,
+                        null,null,null);
 
                 HorariosClases horario1 = new HorariosClases(null,null,null);
                 HorariosClases horario2 = new HorariosClases(null,null,null);
 
-                ProgramaAcademico ingenieria_de_sistemas = new ProgramaAcademico(false,false,false,false,0,null,
-                        0,null);
-                ProgramaAcademico redes_de_telecomunicaciones = new ProgramaAcademico(false,false,false,false,0,null,
-                        0,null);
+                ProgramaAcademico ingenieria_de_sistemas = new ProgramaAcademico(true,false,false,false,101447,
+                        "Ingenieria de sistemas y computación", 10,null);
+                ProgramaAcademico redes_de_telecomunicaciones = new ProgramaAcademico(false,false,true,false,6998,
+                        "Especialización en redes de telecomunicaciones", 8,null);
 
                 InformacionFinanciera estatus1 = new InformacionFinanciera(null,null,false,null);
                 InformacionFinanciera estatus2 = new InformacionFinanciera(null,null,false,null);

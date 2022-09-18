@@ -8,10 +8,10 @@ public class Grupo {
     private int cantidad_estudiantes;
     private Materia materia;
     private List<Estudiante> lista_estudiantes;
-    private Profesor profesor;
+    private String profesor;
     private HorariosClases horario;
 
-    public Grupo(int numero, int carga_horaria, int cantidad_estudiantes, Materia materia,List<Estudiante> lista_estudiantes,Profesor profesor,HorariosClases horario){
+    public Grupo(int numero, int carga_horaria, int cantidad_estudiantes, Materia materia,List<Estudiante> lista_estudiantes,String profesor,HorariosClases horario){
         this.setNumero(numero);
         this.setCargaHoraria(carga_horaria);
         this.setCantidadEstudiantes(cantidad_estudiantes);
@@ -57,10 +57,10 @@ public class Grupo {
     public void setLista_estudiantes(List<Estudiante> lista_estudiantes){
         this.lista_estudiantes = lista_estudiantes;
     }
-    public Profesor getProfesor(){
+    public String getProfesor(){
         return profesor;
     }
-    public void setProfesor(Profesor profesor){
+    public void setProfesor(String profesor){
         this.profesor = profesor;
     }
 

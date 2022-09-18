@@ -11,9 +11,28 @@ public class MiniSia {
         public static void main(String[] args){
                 Profesor armando = new Profesor("Armando","Villamil",55888,null,"Profesor de planta","FEM 205",
                         null,null);
+                Profesor jose = new Profesor(null,null,0,null,null,null,null,null);
+
+                Grupo grupo1 = new Grupo(0,0,0,null,null,null,null);
+                Grupo grupo2 = new Grupo(0,0,0,null,null,null,null);
+
+                Materia algebra_lineal = new Materia(null,0,null,null,null);
+                Materia programacion_orientada_a_objetos = new Materia(null,0,null,null,null);
+
+                HorariosClases horario1 = new HorariosClases(null,null,null);
+                HorariosClases horario2 = new HorariosClases(null,null,null);
+
+                ProgramaAcademico ingenieria_de_sistemas = new ProgramaAcademico(false,false,false,false,0,null,
+                        0,null);
+                ProgramaAcademico redes_de_telecomunicaciones = new ProgramaAcademico(false,false,false,false,0,null,
+                        0,null);
+
+                InformacionFinanciera estatus1 = new InformacionFinanciera(null,null,false,null);
+                InformacionFinanciera estatus2 = new InformacionFinanciera(null,null,false,null);
+
                 Estudiante martin = new Estudiante("Martin","Moreno",1034657217,170144,"Cra 94B#42F-46SUR",3103017732l,
                 "O+",armando.getNombre()+" "+armando.getApellido(),null,null);
-                        Estudiante gabriel = new Estudiante("Gabriel","Fonseca",100078889,144786,"Calle 100#55-40",31478869922l,
+                Estudiante gabriel = new Estudiante("Gabriel","Fonseca",100078889,144786,"Calle 100#55-40",31478869922l,
                 "A+",null,null,null);
 
                 UI.bienvedida();
@@ -57,7 +76,87 @@ public class MiniSia {
                                 default:
                                         UI.error();
                         }
+
                 }
+                if(seleccion == 2){
+                        switch (segunda_seleccion){
+                                case 1:
+                                        UI.imprimir_profesor(armando);
+                                        break;
+                                case 2:
+                                        UI.imprimir_profesor(jose);
+                                        break;
+                                default:
+                                        UI.error();
+                        }
+
+                }
+                if(seleccion == 3){
+                        switch (segunda_seleccion){
+                                case 1:
+                                        UI.imprimir_grupo(grupo1);
+                                        break;
+                                case 2:
+                                        UI.imprimir_grupo(grupo2);
+                                        break;
+                                default:
+                                        UI.error();
+                        }
+
+                }
+                if(seleccion == 4){
+                        switch (segunda_seleccion){
+                                case 1:
+                                        UI.imprimir_materia(algebra_lineal);
+                                        break;
+                                case 2:
+                                        UI.imprimir_materia(programacion_orientada_a_objetos);
+                                        break;
+                                default:
+                                        UI.error();
+                        }
+
+                }
+                if(seleccion == 5){
+                        switch (segunda_seleccion){
+                                case 1:
+                                        UI.imprimir_programa_academico(ingenieria_de_sistemas);
+                                        break;
+                                case 2:
+                                        UI.imprimir_programa_academico(redes_de_telecomunicaciones);
+                                        break;
+                                default:
+                                        UI.error();
+                        }
+
+                }
+                if(seleccion == 6){
+                        switch (segunda_seleccion){
+                                case 1:
+                                        UI.imprimir_horario(horario1);
+                                        break;
+                                case 2:
+                                        UI.imprimir_horario(horario2);
+                                        break;
+                                default:
+                                        UI.error();
+                        }
+
+                }
+                if(seleccion == 7){
+                        switch (segunda_seleccion){
+                                case 1:
+                                        UI.imprimir_info_financiera(estatus1);
+                                        break;
+                                case 2:
+                                        UI.imprimir_info_financiera(estatus2);
+                                        break;
+                                default:
+                                        UI.error();
+                        }
+
+                }
+
 
 
         }

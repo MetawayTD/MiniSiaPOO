@@ -11,6 +11,16 @@ public class Grupo {
     private Profesor profesor;
     private HorariosClases horario;
 
+    public Grupo(int numero, int carga_horaria, int cantidad_estudiantes, Materia materia,List<Estudiante> lista_estudiantes,Profesor profesor,HorariosClases horario){
+        this.setNumero(numero);
+        this.setCargaHoraria(carga_horaria);
+        this.setCantidadEstudiantes(cantidad_estudiantes);
+        this.setMateria(materia);
+        this.setLista_estudiantes(lista_estudiantes);
+        this.setProfesor(profesor);
+        this.setHorario(horario);
+    }
+
 
     public int getNumero() {
         return numero;

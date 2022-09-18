@@ -13,6 +13,18 @@ public class Profesor {
     private List<Estudiante> encargados;
     private List<Grupo> grupos_a_cargo;
 
+    public Profesor(String nombre, String apellido, int codigo, List<String> titulos, String categoria, String ubicacion_oficina,
+                    List<Estudiante> encargados, List<Grupo> grupos_a_cargo) {
+        this.setNombre(nombre);
+        this.setApellido(apellido);
+        this.setCodigo(codigo);
+        this.setTitulos(titulos);
+        this.setCategoria(categoria);
+        this.setUbicacion_oficina(ubicacion_oficina);
+        this.setEncargados(encargados);
+        this.setGrupos_a_cargo(grupos_a_cargo);
+    }
+
 
     public String getNombre() {
         return nombre;

@@ -10,6 +10,15 @@ public class Materia {
     private List<String> temas;
     private List<Grupo> grupos;
 
+    public Materia(String nombre, int numero_creditos, List<String> prerrequisitos, List<String> temas, List<Grupo> grupos) {
+        this.setNombre(nombre);
+        this.setNumero_creditos(numero_creditos);
+        this.setPrerrequisitos(prerrequisitos);
+        this.setTemas(temas);
+        this.setGrupos(grupos);
+    }
+
+
     public String getNombre() {
         return nombre;
     }

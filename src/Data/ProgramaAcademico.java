@@ -11,6 +11,17 @@ public class ProgramaAcademico {
     private int semestres;
     private Estudiante estudiante;
 
+    public ProgramaAcademico(boolean pregrado, boolean maestria, boolean especializacion, boolean doctorado, int codigo, String nombre,
+                             int semestres, Estudiante estudiante) {
+        this.setPregrado(pregrado);
+        this.setMaestria(maestria);
+        this.setEspecializacion(especializacion);
+        this.setDoctorado(doctorado);
+        this.setCodigo(codigo);
+        this.setNombre(nombre);
+        this.setSemestres(semestres);
+        this.setEstudiante(estudiante);
+    }
 
     public boolean isPregrado() {
         return pregrado;

@@ -8,6 +8,13 @@ public class HorariosClases {
     private int [] horas;
     private List<Grupo> grupos;
 
+    public HorariosClases(String[] dias, int[] horas, List<Grupo> grupos) {
+        this.setDias(dias);
+        this.setHoras(horas);
+        this.setGrupos(grupos);
+    }
+
+
     public String [] getDias() {
         return dias;
     }

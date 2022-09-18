@@ -2,10 +2,20 @@ package Data;
 
 public class InformacionFinanciera {
 
+
     private String periodo_academico;
     private String estado_cuenta;
     private boolean recibo_pago;
     private Estudiante estudiante;
+
+    public InformacionFinanciera(String periodo_academico, String estado_cuenta, boolean recibo_pago, Estudiante estudiante) {
+        this.setPeriodo_academico(periodo_academico);
+        this.setEstado_cuenta(estado_cuenta);
+        this.setRecibo_pago(recibo_pago);
+        this.setEstudiante(estudiante);
+    }
+
+
 
     public String getPeriodo_academico() {
         return periodo_academico;

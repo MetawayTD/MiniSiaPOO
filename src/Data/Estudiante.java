@@ -10,12 +10,29 @@ public class Estudiante {
     private int codigo;
     private String direccion;
     private double [] notas;
-    private int numero_telefono;
+    private long numero_telefono;
     private String tipo_sangre;
     private ProgramaAcademico programa_academico;
     private Profesor tutor;
     private List<Grupo> grupos;
     private InformacionFinanciera info_financiera;
+
+    public Estudiante(String nombre,String apellido, int documento, int codigo, String direccion, double [] notas, long numero_telefono, String tipo_sangre,
+                      Profesor tutor,List<Grupo> grupos, InformacionFinanciera info_financiera){
+        this.setNombre(nombre);
+        this.setApellido(apellido);
+        this.setDocumento(documento);
+        this.setCodigo(codigo);
+        this.setDireccion(direccion);
+        this.setNotas(notas);
+        this.setNumero_telefono(numero_telefono);
+        this.setTipo_sangre(tipo_sangre);
+        this.setTutor(tutor);
+        this.setGrupo(grupos);
+        this.setInfo_financiera(info_financiera);
+
+    }
+
 
     public String getNombre() {
         return nombre;
@@ -65,11 +82,11 @@ public class Estudiante {
         this.notas = notas;
     }
 
-    public int getNumero_telefono() {
+    public long getNumero_telefono() {
         return numero_telefono;
     }
 
-    public void setNumero_telefono(int numero_telefono) {
+    public void setNumero_telefono(long numero_telefono) {
         this.numero_telefono = numero_telefono;
     }
 
@@ -93,8 +110,8 @@ public class Estudiante {
         return tutor;
     }
 
-    public void setTutor(Profesor tutor) {
-        this.tutor = tutor;
+        public void setTutor(Profesor tutor) {
+            this.tutor = tutor;
     }
 
     public List<Grupo> getGrupos() {
@@ -112,6 +129,7 @@ public class Estudiante {
     public void setInfo_financiera(InformacionFinanciera info_financiera) {
         this.info_financiera = info_financiera;
     }
+
 
     @Override
     public String toString() {

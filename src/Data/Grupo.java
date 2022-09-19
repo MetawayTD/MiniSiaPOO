@@ -83,7 +83,7 @@ public class Grupo {
     public String toString() {
         return "El numero del grupo es " + numero +
                 ", requiere " + carga_horaria + "a la semana" +
-                ", corresponde a la materia de " + materia +
+                ", corresponde a la materia de " + materia.getNombre() +
                 ", Esta formado por estos estudiantes " + lista_estudiantes +
                 ", el docente encargado del grupo es " + profesor.getNombre() +
                 " y su horario es en los dias " + horario.getDias() + "a las " + horario.getHoras();

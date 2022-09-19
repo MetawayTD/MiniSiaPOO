@@ -126,13 +126,13 @@ public class Estudiante {
 
     @Override
     public String toString() {
-        return "mi nombre es " + nombre + ", mi documento de identidad es " + documento +
-                ", mi direccion es " + direccion +
-                ", mi numero_telefono es " + numero_telefono +
-                ", mi tipo_sangre es " + tipo_sangre +
-                ", estoy estudiando " + programa_academico.getEstudios() + "en " + programa_academico.getNombre() +
-                ", mi tutor es" + tutor.getNombre() +
-                ", pertenezco a los grupos " + grupos +
-                ", y mi estado financiero es " + info_financiera.getEstado_cuenta();
+        return "mi nombre es " + this.getNombre() + ", mi documento de identidad es " + this.getDocumento() +
+                ", mi direccion es " + this.getDireccion() +
+                ", mi numero_telefono es " + this.getNumero_telefono() +
+                ", mi tipo_sangre es " + this.getTipo_sangre() +
+                ", estoy estudiando " + this.programa_academico.getEstudios() + "en " + this.programa_academico.getNombre() +
+                ", mi tutor es" + this.tutor.getNombre() +
+                ", pertenezco a los grupos " + this.getGrupos() +
+                ", y mi estado financiero es " + this.info_financiera.getEstado_cuenta();
     }
 }

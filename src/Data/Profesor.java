@@ -13,7 +13,7 @@ public class Profesor {
     private List<Estudiante> encargados;
     private List<Grupo> grupos_a_cargo;
 
-    public Profesor(String nombre, String apellido, String correo, ArrayList<String> titulos, String categoria, String ubicacion_oficina,
+    public Profesor(String nombre,String correo, ArrayList<String> titulos, String categoria, String ubicacion_oficina,
                     List<Estudiante> encargados, List<Grupo> grupos_a_cargo) {
         this.setNombre(nombre);
         this.setCodigo(correo);
@@ -22,6 +22,18 @@ public class Profesor {
         this.setUbicacion_oficina(ubicacion_oficina);
         this.setEncargados(encargados);
         this.setGrupos_a_cargo(grupos_a_cargo);
+    }
+    public Profesor(String nombre,String correo, ArrayList<String> titulos, String categoria, String ubicacion_oficina){
+        this.setNombre(nombre);
+        this.setCodigo(correo);
+        this.setTitulos(titulos);
+        this.setCategoria(categoria);
+        this.setUbicacion_oficina(ubicacion_oficina);
+    }
+    public Profesor(String nombre,String correo, ArrayList<String> titulos){
+        this.setNombre(nombre);
+        this.setCodigo(correo);
+        this.setTitulos(titulos);
     }
 
 

@@ -10,12 +10,19 @@ public class ProgramaAcademico {
     private ArrayList<Estudiante> estudiante;
 
     public ProgramaAcademico(String estudios, String nombre, int semestres, ArrayList<Estudiante> estudiante) {
-
         this.setEstudios(estudios);
-
         this.setNombre(nombre);
         this.setSemestres(semestres);
         this.setEstudiante(estudiante);
+    }
+    public ProgramaAcademico(String estudios, String nombre, int semestres){
+        this.setEstudios(estudios);
+        this.setNombre(nombre);
+        this.setSemestres(semestres);
+    }
+    public ProgramaAcademico(String estudios, String nombre){
+        this.setEstudios(estudios);
+        this.setNombre(nombre);
     }
 
     public String getEstudios(){

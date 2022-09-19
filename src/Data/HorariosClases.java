@@ -12,6 +12,13 @@ public class HorariosClases {
         this.setHoras(horas);
         this.setGrupos(grupos);
     }
+    public HorariosClases(ArrayList<String> dias,ArrayList<Integer> horas){
+        this.setDias(dias);
+        this.setHoras(horas);
+    }
+    public HorariosClases(ArrayList<String> dias){
+        this.setDias(dias);
+    }
 
 
     public ArrayList<String> getDias() {

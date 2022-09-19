@@ -17,7 +17,18 @@ public class Materia {
         this.setTemas(temas);
         this.setGrupos(grupos);
     }
+    public Materia(String nombre, int numero_creditos, ArrayList<String> prerrequisitos,ArrayList<Grupo> grupos){
+        this.setNombre(nombre);
+        this.setNumero_creditos(numero_creditos);
+        this.setPrerrequisitos(prerrequisitos);
+        this.setGrupos(grupos);
+    }
 
+    public Materia(String nombre, int numero_creditos, ArrayList<String> prerrequisitos){
+        this.setNombre(nombre);
+        this.setNumero_creditos(numero_creditos);
+        this.setPrerrequisitos(prerrequisitos);
+    }
 
     public String getNombre() {
         return nombre;

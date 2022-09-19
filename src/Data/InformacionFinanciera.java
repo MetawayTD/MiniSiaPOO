@@ -7,9 +7,16 @@ public class InformacionFinanciera {
     private String estado_cuenta;
     private Estudiante estudiante;
 
-    public InformacionFinanciera(String periodo_academico, String estado_cuenta, boolean recibo_pago, Estudiante estudiante) {
+    public InformacionFinanciera(String periodo_academico, String estado_cuenta, Estudiante estudiante) {
         this.setPeriodo_academico(periodo_academico);
         this.setEstado_cuenta(estado_cuenta);
+        this.setEstudiante(estudiante);
+    }
+    public InformacionFinanciera(String estado_cuenta, Estudiante estudiante){
+        this.setEstado_cuenta(estado_cuenta);
+        this.setEstudiante(estudiante);
+    }
+    public InformacionFinanciera(Estudiante estudiante) {
         this.setEstudiante(estudiante);
     }
 

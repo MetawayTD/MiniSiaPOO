@@ -1,28 +1,25 @@
 package Data;
-import java.util.Arrays;
-import java.util.List;
+import java.util.ArrayList;
 
 public class Estudiante {
 
     private String nombre;
-    private String apellido;
     private int documento;
-    private int codigo;
+    private String correo;
     private String direccion;
     private long numero_telefono;
     private String tipo_sangre;
     private ProgramaAcademico programa_academico;
-    private String tutor;
-    private List<Grupo> grupos;
+    private Profesor tutor;
+    private ArrayList<Grupo> grupos;
     private InformacionFinanciera info_financiera;
 
 
-    public Estudiante(String nombre,String apellido, int documento, int codigo, String direccion, long numero_telefono, String tipo_sangre,
-                      String tutor,List<Grupo> grupos, InformacionFinanciera info_financiera){
+    public Estudiante(String nombre, int documento, String correo, String direccion, long numero_telefono, String tipo_sangre,
+                      Profesor tutor, ArrayList<Grupo> grupos, InformacionFinanciera info_financiera){
         this.setNombre(nombre);
-        this.setApellido(apellido);
         this.setDocumento(documento);
-        this.setCodigo(codigo);
+        this.setCorreo(correo);
         this.setDireccion(direccion);
         this.setNumero_telefono(numero_telefono);
         this.setTipo_sangre(tipo_sangre);
@@ -41,14 +38,6 @@ public class Estudiante {
         this.nombre = nombre;
     }
 
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
     public int getDocumento() {
         return documento;
     }
@@ -57,12 +46,12 @@ public class Estudiante {
         this.documento = documento;
     }
 
-    public int getCodigo() {
-        return codigo;
+    public String getCorreo() {
+        return correo;
     }
 
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
     public String getDireccion() {
@@ -97,19 +86,19 @@ public class Estudiante {
         this.programa_academico = programa_academico;
     }
 
-    public String getTutor() {
+    public Profesor getTutor() {
         return tutor;
     }
 
-        public void setTutor(String tutor) {
+        public void setTutor(Profesor tutor) {
             this.tutor = tutor;
     }
 
-    public List<Grupo> getGrupos() {
+    public ArrayList<Grupo> getGrupos() {
         return grupos;
     }
 
-    public void setGrupo(List<Grupo> grupos) {
+    public void setGrupo(ArrayList<Grupo> grupos) {
         this.grupos = grupos;
     }
 
@@ -126,9 +115,7 @@ public class Estudiante {
     public String toString() {
         return "Estudiante{" +
                 "\nnombre= '" + nombre +
-                "'\napellido= '" + apellido +
                 "'\ndocumento= " + documento +
-                "\ncodigo= " + codigo +
                 "\ndireccion= '" + direccion +
                 "'\nnumero_telefono= " + numero_telefono +
                 "\ntipo_sangre= '" + tipo_sangre +

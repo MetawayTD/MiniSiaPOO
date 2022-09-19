@@ -1,49 +1,48 @@
 package Data;
-import java.util.Arrays;
-import java.util.List;
+import java.util.ArrayList;
 
 public class HorariosClases {
 
-    private String [] dias;
-    private int [] horas;
-    private List<Grupo> grupos;
+    private ArrayList<String> dias;
+    private ArrayList<Integer>  horas;
+    private ArrayList<Grupo> grupos;
 
-    public HorariosClases(String[] dias, int[] horas, List<Grupo> grupos) {
+    public HorariosClases(ArrayList<String> dias,ArrayList<Integer> horas,ArrayList<Grupo> grupos) {
         this.setDias(dias);
         this.setHoras(horas);
         this.setGrupos(grupos);
     }
 
 
-    public String [] getDias() {
+    public ArrayList<String> getDias() {
         return dias;
     }
 
-    public void setDias(String [] dias) {
+    public void setDias(ArrayList<String> dias) {
         this.dias = dias;
     }
 
-    public int [] getHoras() {
+    public ArrayList<Integer>  getHoras() {
         return horas;
     }
 
-    public void setHoras(int [] horas) {
+    public void setHoras(ArrayList<Integer>  horas) {
         this.horas = horas;
     }
 
-    public List<Grupo> getGrupos() {
+    public ArrayList<Grupo> getGrupos() {
         return grupos;
     }
 
-    public void setGrupos(List<Grupo> grupos) {
+    public void setGrupos(ArrayList<Grupo> grupos) {
         this.grupos = grupos;
     }
 
     @Override
     public String toString() {
         return "HorariosClases{" +
-                "\ndias= " + Arrays.toString(dias) +
-                "\nhoras= " + Arrays.toString(horas) +
+                "\ndias= " + dias+
+                "\nhoras= " + horas +
                 "\ngrupos= " + grupos +
                 '}';
     }

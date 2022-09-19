@@ -1,16 +1,16 @@
 package Data;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class Materia {
 
     private String nombre;
     private int numero_creditos;
-    private List<String> prerrequisitos;
-    private List<String> temas;
-    private List<Grupo> grupos;
+    private ArrayList<String> prerrequisitos;
+    private ArrayList<String> temas;
+    private ArrayList<Grupo> grupos;
 
-    public Materia(String nombre, int numero_creditos, List<String> prerrequisitos, List<String> temas, List<Grupo> grupos) {
+    public Materia(String nombre, int numero_creditos, ArrayList<String> prerrequisitos, ArrayList<String> temas, ArrayList<Grupo> grupos) {
         this.setNombre(nombre);
         this.setNumero_creditos(numero_creditos);
         this.setPrerrequisitos(prerrequisitos);
@@ -35,28 +35,28 @@ public class Materia {
         this.numero_creditos = numero_creditos;
     }
 
-    public List<String> getPrerrequisitos() {
+    public ArrayList<String> getPrerrequisitos() {
         return prerrequisitos;
     }
 
-    public void setPrerrequisitos(List<String> prerrequisitos) {
+    public void setPrerrequisitos(ArrayList<String> prerrequisitos) {
         this.prerrequisitos = prerrequisitos;
     }
 
-    public List<String> getTemas() {
+    public ArrayList<String> getTemas() {
         return temas;
     }
 
-    public void setTemas(List<String> temas) {
+    public void setTemas(ArrayList<String> temas) {
         this.temas = temas;
     }
 
 
-    public List<Grupo> getGrupos() {
+    public ArrayList<Grupo> getGrupos() {
         return grupos;
     }
 
-    public void setGrupos(List<Grupo> grupos) {
+    public void setGrupos(ArrayList<Grupo> grupos) {
         this.grupos = grupos;
     }
 

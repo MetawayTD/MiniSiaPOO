@@ -1,66 +1,28 @@
 package Data;
 
+import java.util.ArrayList;
+
 public class ProgramaAcademico {
 
-    private boolean pregrado;
-    private boolean maestria;
-    private boolean especializacion;
-    private boolean doctorado;
-    private int codigo;
+    private String estudios;
     private String nombre;
     private int semestres;
-    private Estudiante estudiante;
+    private ArrayList<Estudiante> estudiante;
 
-    public ProgramaAcademico(boolean pregrado, boolean maestria, boolean especializacion, boolean doctorado, int codigo, String nombre,
-                             int semestres, Estudiante estudiante) {
-        this.setPregrado(pregrado);
-        this.setMaestria(maestria);
-        this.setEspecializacion(especializacion);
-        this.setDoctorado(doctorado);
-        this.setCodigo(codigo);
+    public ProgramaAcademico(String estudios, String nombre, int semestres, ArrayList<Estudiante> estudiante) {
+
+        this.setEstudios(estudios);
+
         this.setNombre(nombre);
         this.setSemestres(semestres);
         this.setEstudiante(estudiante);
     }
 
-    public boolean isPregrado() {
-        return pregrado;
+    public String getEstudios(){
+        return estudios;
     }
-
-    public void setPregrado(boolean pregrado) {
-        this.pregrado = pregrado;
-    }
-
-    public boolean isMaestria() {
-        return maestria;
-    }
-
-    public void setMaestria(boolean maestria) {
-        this.maestria = maestria;
-    }
-
-    public boolean isEspecializacion() {
-        return especializacion;
-    }
-
-    public void setEspecializacion(boolean especializacion) {
-        this.especializacion = especializacion;
-    }
-
-    public boolean isDoctorado() {
-        return doctorado;
-    }
-
-    public void setDoctorado(boolean doctorado) {
-        this.doctorado = doctorado;
-    }
-
-    public int getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
+    public void setEstudios(String estudios) {
+        this.estudios = estudios;
     }
 
     public String getNombre() {
@@ -79,22 +41,18 @@ public class ProgramaAcademico {
         this.semestres = semestres;
     }
 
-    public Estudiante getEstudiante() {
+    public ArrayList<Estudiante> getEstudiante() {
         return estudiante;
     }
 
-    public void setEstudiante(Estudiante estudiante) {
+    public void setEstudiante(ArrayList<Estudiante> estudiante) {
         this.estudiante = estudiante;
     }
 
     @Override
     public String toString() {
         return "ProgramaAcademico{" +
-                "\npregrado=" + pregrado +
-                "\nmaestria=" + maestria +
-                "\nespecializacion=" + especializacion +
-                "\ndoctorado=" + doctorado +
-                "\ncodigo=" + codigo +
+                "\nestudios=" + estudios +
                 "\nnombre='" + nombre +
                 "\nsemestres=" + semestres +
                 "\nestudiante=" + estudiante +

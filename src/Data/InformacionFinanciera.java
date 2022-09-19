@@ -5,13 +5,11 @@ public class InformacionFinanciera {
 
     private String periodo_academico;
     private String estado_cuenta;
-    private boolean recibo_pago;
     private Estudiante estudiante;
 
     public InformacionFinanciera(String periodo_academico, String estado_cuenta, boolean recibo_pago, Estudiante estudiante) {
         this.setPeriodo_academico(periodo_academico);
         this.setEstado_cuenta(estado_cuenta);
-        this.setRecibo_pago(recibo_pago);
         this.setEstudiante(estudiante);
     }
 
@@ -33,14 +31,6 @@ public class InformacionFinanciera {
         this.estado_cuenta = estado_cuenta;
     }
 
-    public boolean isRecibo_pago() {
-        return recibo_pago;
-    }
-
-    public void setRecibo_pago(boolean recibo_pago) {
-        this.recibo_pago = recibo_pago;
-    }
-
     public Estudiante getEstudiante() {
         return estudiante;
     }
@@ -54,7 +44,6 @@ public class InformacionFinanciera {
         return "InformacionFinanciera{" +
                 "\nperiodo_academico= '" + periodo_academico +
                 "\nestado_cuenta= '" + estado_cuenta +
-                "\nrecibo_pago= " + recibo_pago +
                 "\nestudiante= " + estudiante +
                 '}';
     }

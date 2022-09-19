@@ -41,10 +41,8 @@ public class InformacionFinanciera {
 
     @Override
     public String toString() {
-        return "InformacionFinanciera{" +
-                "\nperiodo_academico= '" + periodo_academico +
-                "\nestado_cuenta= '" + estado_cuenta +
-                "\nestudiante= " + estudiante +
-                '}';
+        return  "Esta información corresponde al periodo_academico '" + periodo_academico +
+                ", el estado financiero es " + estado_cuenta +
+                ", que corresponde al estudiante " + estudiante;
     }
 }

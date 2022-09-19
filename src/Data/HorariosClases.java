@@ -40,11 +40,9 @@ public class HorariosClases {
 
     @Override
     public String toString() {
-        return "HorariosClases{" +
-                "\ndias= " + dias+
-                "\nhoras= " + horas +
-                "\ngrupos= " + grupos +
-                '}';
+        return "En este horario hay clases los dias " + dias+
+                ", a las " + horas +
+                "y corresponde a los grupos " + grupos;
     }
 }
 

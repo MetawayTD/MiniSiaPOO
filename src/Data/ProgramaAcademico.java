@@ -51,12 +51,10 @@ public class ProgramaAcademico {
 
     @Override
     public String toString() {
-        return "ProgramaAcademico{" +
-                "\nestudios=" + estudios +
-                "\nnombre='" + nombre +
-                "\nsemestres=" + semestres +
-                "\nestudiante=" + estudiante +
-                '}';
+        return "El programa académico es " + estudios +
+                ", se llama " + nombre +
+                ", tiene una duración de " + semestres + " semestres" +
+                " lo cursan " + estudiante;
     }
 }
 

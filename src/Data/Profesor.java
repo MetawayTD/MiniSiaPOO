@@ -83,14 +83,12 @@ public class Profesor {
 
     @Override
     public String toString() {
-        return "Profesor{" +
-                "\nnombre='" + nombre +
-                "\ntitulos=" + titulos +
-                "\ncategoria='" + categoria +
-                "\nubicacion_oficina='" + ubicacion_oficina +
-                "\nencargados=" + encargados +
-                "\ngrupos_a_cargo=" + grupos_a_cargo +
-                '}';
+        return "Mi nombre es" + nombre +
+                ", tengo estos titulos=" + titulos +
+                ", soy " + categoria +
+                ", la ubicación de mi oficina es " + ubicacion_oficina +
+                ", los estudiantes a mi cargo son " + encargados +
+                "y enseño en estos grupos " + grupos_a_cargo;
     }
 }
 

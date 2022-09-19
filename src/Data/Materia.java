@@ -62,12 +62,10 @@ public class Materia {
 
     @Override
     public String toString() {
-        return "Materia{" +
-                "\nnombre=' " + nombre +
-                "\nnumero_creditos= " + numero_creditos +
-                "\nprerrequisitos= " + prerrequisitos +
-                "\ntemas= " + temas +
-                "\ngrupos= " + grupos +
-                '}';
+        return  "El nombre de esta materia es " + nombre +
+                ", cuenta con " + numero_creditos + "créditos"+
+                ", requiere se se hayan aprobado estas materias anteriormente " + prerrequisitos +
+                ", se veran los temas " + temas +
+                ", se enseña en los grupos " + grupos;
     }
 }

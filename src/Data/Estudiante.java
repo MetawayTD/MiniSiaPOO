@@ -26,8 +26,21 @@ public class Estudiante {
         this.setTutor(tutor);
         this.setGrupo(grupos);
         this.setInfo_financiera(info_financiera);
+    }
+    public Estudiante(String nombre, int documento, String correo, String direccion, long numero_telefono, String tipo_sangre){
+        this.setNombre(nombre);
+        this.setDocumento(documento);
+        this.setCorreo(correo);
+        this.setDireccion(direccion);
+        this.setNumero_telefono(numero_telefono);
+        this.setTipo_sangre(tipo_sangre);
 
     }
+     public Estudiante(String nombre, int documento, String correo){
+         this.setNombre(nombre);
+         this.setDocumento(documento);
+         this.setCorreo(correo);
+     }
 
 
     public String getNombre() {
@@ -113,17 +126,13 @@ public class Estudiante {
 
     @Override
     public String toString() {
-        return "Estudiante{" +
-                "\nnombre= '" + nombre +
-                "'\ndocumento= " + documento +
-                "\ndireccion= '" + direccion +
-                "'\nnumero_telefono= " + numero_telefono +
-                "\ntipo_sangre= '" + tipo_sangre +
-                "'\nprograma_academico= " + programa_academico +
-                "\ntutor= " + tutor +
-                "\ngrupos= " + grupos +
-
-                "\ninfo_financiera= " + info_financiera +
-                '}';
+        return "mi nombre es " + nombre + ", mi documento de identidad es " + documento +
+                ", mi direccion es " + direccion +
+                ", mi numero_telefono es " + numero_telefono +
+                ", mi tipo_sangre es " + tipo_sangre +
+                ", estoy estudiando " + programa_academico.getEstudios() + "en " + programa_academico.getNombre() +
+                ", mi tutor es" + tutor.getNombre() +
+                ", pertenezco a los grupos " + grupos +
+                ", y mi estado financiero es " + info_financiera.getEstado_cuenta();
     }
 }

@@ -5,20 +5,30 @@ public class Grupo {
 
     private int numero;
     private int carga_horaria;
-    private int cantidad_estudiantes;
     private Materia materia;
     private List<Estudiante> lista_estudiantes;
-    private String profesor;
+    private Profesor profesor;
     private HorariosClases horario;
 
-    public Grupo(int numero, int carga_horaria, int cantidad_estudiantes, Materia materia,List<Estudiante> lista_estudiantes,String profesor,HorariosClases horario){
+    public Grupo(int numero, int carga_horaria, Materia materia,Profesor profesor,List<Estudiante> lista_estudiantes,HorariosClases horario){
         this.setNumero(numero);
         this.setCargaHoraria(carga_horaria);
-        this.setCantidadEstudiantes(cantidad_estudiantes);
         this.setMateria(materia);
-        this.setLista_estudiantes(lista_estudiantes);
         this.setProfesor(profesor);
+        this.setLista_estudiantes(lista_estudiantes);
         this.setHorario(horario);
+    }
+    public Grupo(int numero, int carga_horaria, Materia materia, Profesor profesor){
+        this.setNumero(numero);
+        this.setCargaHoraria(carga_horaria);
+        this.setMateria(materia);
+        this.setProfesor(profesor);
+    }
+    public Grupo(int numero, int carga_horaria, Materia materia){
+        this.setNumero(numero);
+        this.setCargaHoraria(carga_horaria);
+        this.setMateria(materia);
+
     }
 
 
@@ -38,29 +48,26 @@ public class Grupo {
         this.carga_horaria = cargaHoraria;
     }
 
-    public int getCantidadEstudiantes() {
-        return cantidad_estudiantes;
-    }
-
-    public void setCantidadEstudiantes(int cantidadEstudiantes) {
-        this.cantidad_estudiantes = cantidadEstudiantes;
-    }
     public Materia getMateria(){
         return materia;
     }
+
     public void setMateria(Materia materia){
         this.materia = materia;
     }
+
     public List<Estudiante> getLista_estudiantes(){
         return lista_estudiantes;
     }
+
     public void setLista_estudiantes(List<Estudiante> lista_estudiantes){
         this.lista_estudiantes = lista_estudiantes;
     }
-    public String getProfesor(){
+
+    public Profesor getProfesor(){
         return profesor;
     }
-    public void setProfesor(String profesor){
+    public void setProfesor(Profesor profesor){
         this.profesor = profesor;
     }
 
@@ -74,14 +81,12 @@ public class Grupo {
 
     @Override
     public String toString() {
-        return "Grupo{" +
-                "\nnumero= " + numero +
-                "\ncarga_horaria= " + carga_horaria +
-                "\ncantidad_estudiantes= " + cantidad_estudiantes +
-                "\nmateria= " + materia +
-                "\nlista_estudiantes= " + lista_estudiantes +
-                "\nprofesor= " + profesor +
-                "\nhorario= " + horario +
-                '}';
+        return "El numero del grupo es " + numero +
+                ", requiere " + carga_horaria + "a la semana" +
+                ", corresponde a la materia de " + materia +
+                ", Esta formado por estos estudiantes " + lista_estudiantes +
+                ", el docente encargado del grupo es " + profesor.getNombre() +
+                " y su horario es en los dias " + horario.getDias() + "a las " + horario.getHoras();
+
     }
 }

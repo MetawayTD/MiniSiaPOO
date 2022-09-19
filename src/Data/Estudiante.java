@@ -8,32 +8,31 @@ public class Estudiante {
     private String correo;
     private String direccion;
     private long numero_telefono;
-    private String tipo_sangre;
-    private ProgramaAcademico programa_academico;
-    private Profesor tutor;
-    private ArrayList<Grupo> grupos;
-    private InformacionFinanciera info_financiera;
+    private  Profesor tutor;
+    private  ProgramaAcademico programa_academico;
+    private  ArrayList<Grupo> grupos;
+    private  InformacionFinanciera info_financiera;
 
 
-    public Estudiante(String nombre, int documento, String correo, String direccion, long numero_telefono, String tipo_sangre,
-                      Profesor tutor, ArrayList<Grupo> grupos, InformacionFinanciera info_financiera){
+    public Estudiante(String nombre, int documento, String correo, String direccion, long numero_telefono, Profesor tutor,ProgramaAcademico prog_aca,
+                      ArrayList<Grupo> grupos, InformacionFinanciera info_financiera){
         this.setNombre(nombre);
         this.setDocumento(documento);
         this.setCorreo(correo);
         this.setDireccion(direccion);
         this.setNumero_telefono(numero_telefono);
-        this.setTipo_sangre(tipo_sangre);
         this.setTutor(tutor);
+        this.setPrograma_academico(prog_aca);
         this.setGrupo(grupos);
         this.setInfo_financiera(info_financiera);
     }
-    public Estudiante(String nombre, int documento, String correo, String direccion, long numero_telefono, String tipo_sangre){
+    public Estudiante(String nombre, int documento, String correo, String direccion, long numero_telefono){
         this.setNombre(nombre);
         this.setDocumento(documento);
         this.setCorreo(correo);
         this.setDireccion(direccion);
         this.setNumero_telefono(numero_telefono);
-        this.setTipo_sangre(tipo_sangre);
+
 
     }
      public Estudiante(String nombre, int documento, String correo){
@@ -83,14 +82,6 @@ public class Estudiante {
         this.numero_telefono = numero_telefono;
     }
 
-    public String getTipo_sangre() {
-        return tipo_sangre;
-    }
-
-    public void setTipo_sangre(String tipo_sangre) {
-        this.tipo_sangre = tipo_sangre;
-    }
-
     public ProgramaAcademico getPrograma_academico() {
         return programa_academico;
     }
@@ -129,7 +120,6 @@ public class Estudiante {
         return "mi nombre es " + this.getNombre() + ", mi documento de identidad es " + this.getDocumento() +
                 ", mi direccion es " + this.getDireccion() +
                 ", mi numero_telefono es " + this.getNumero_telefono() +
-                ", mi tipo_sangre es " + this.getTipo_sangre() +
                 ", estoy estudiando " + this.programa_academico.getEstudios() + "en " + this.programa_academico.getNombre() +
                 ", mi tutor es" + this.tutor.getNombre() +
                 ", pertenezco a los grupos " + this.getGrupos() +

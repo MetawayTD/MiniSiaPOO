@@ -2,22 +2,21 @@ package Data;
 
 public class InformacionFinanciera {
 
-
-    private String periodo_academico;
     private String estado_cuenta;
-    private Estudiante estudiante;
+    private String periodo_academico;
+    private  Estudiante estudiante;
 
-    public InformacionFinanciera(String periodo_academico, String estado_cuenta, Estudiante estudiante) {
+    public InformacionFinanciera(String estado_cuenta,String periodo_academico, Estudiante estudiante) {
+        this.setEstado_cuenta(estado_cuenta);
         this.setPeriodo_academico(periodo_academico);
-        this.setEstado_cuenta(estado_cuenta);
         this.setEstudiante(estudiante);
     }
-    public InformacionFinanciera(String estado_cuenta, Estudiante estudiante){
+    public InformacionFinanciera(String estado_cuenta, String periodo_academico){
         this.setEstado_cuenta(estado_cuenta);
-        this.setEstudiante(estudiante);
+        this.setPeriodo_academico(periodo_academico);
     }
-    public InformacionFinanciera(Estudiante estudiante) {
-        this.setEstudiante(estudiante);
+    public InformacionFinanciera(String estado_cuenta) {
+        this.setEstado_cuenta(estado_cuenta);
     }
 
 
@@ -48,8 +47,8 @@ public class InformacionFinanciera {
 
     @Override
     public String toString() {
-        return  "Esta información corresponde al periodo_academico '" + periodo_academico +
-                ", el estado financiero es " + estado_cuenta +
-                ", que corresponde al estudiante " + estudiante;
+        return  "Esta información corresponde al periodo_academico '" + this.getPeriodo_academico() +
+                ", el estado financiero es " + this.getEstado_cuenta() +
+                ", que corresponde al estudiante " + this.getEstudiante();
     }
 }

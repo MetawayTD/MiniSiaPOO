@@ -1,7 +1,6 @@
 package Data;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Profesor {
 
@@ -9,30 +8,30 @@ public class Profesor {
     private String correo;
     private ArrayList<String> titulos;
     private String categoria;
-    private String ubicacion_oficina;
-    private List<Estudiante> encargados;
-    private List<Grupo> grupos_a_cargo;
+    private String departamento;
+    private  ArrayList<Estudiante> encargados;
+    private  ArrayList<Grupo> grupos_a_cargo;
 
-    public Profesor(String nombre,String correo, ArrayList<String> titulos, String categoria, String ubicacion_oficina,
-                    List<Estudiante> encargados, List<Grupo> grupos_a_cargo) {
+    public Profesor(String nombre,String correo, ArrayList<String> titulos, String categoria, String departamento,
+                    ArrayList<Estudiante> encargados, ArrayList<Grupo> grupos_a_cargo) {
         this.setNombre(nombre);
-        this.setCodigo(correo);
+        this.setCorreo(correo);
         this.setTitulos(titulos);
         this.setCategoria(categoria);
-        this.setUbicacion_oficina(ubicacion_oficina);
+        this.setDepartamento(departamento);
         this.setEncargados(encargados);
         this.setGrupos_a_cargo(grupos_a_cargo);
     }
-    public Profesor(String nombre,String correo, ArrayList<String> titulos, String categoria, String ubicacion_oficina){
+    public Profesor(String nombre,String correo, ArrayList<String> titulos, String categoria, String departamento){
         this.setNombre(nombre);
-        this.setCodigo(correo);
+        this.setCorreo(correo);
         this.setTitulos(titulos);
         this.setCategoria(categoria);
-        this.setUbicacion_oficina(ubicacion_oficina);
+        this.setDepartamento(departamento);
     }
     public Profesor(String nombre,String correo, ArrayList<String> titulos){
         this.setNombre(nombre);
-        this.setCodigo(correo);
+        this.setCorreo(correo);
         this.setTitulos(titulos);
     }
 
@@ -45,15 +44,15 @@ public class Profesor {
         this.nombre = nombre;
     }
 
-    public String getCodigo() {
+    public String getCorreo() {
         return correo;
     }
 
-    public void setCodigo(String correo) {
+    public void setCorreo(String correo) {
         this.correo = correo;
     }
 
-    public List<String> getTitulos() {
+    public ArrayList<String> getTitulos() {
         return titulos;
     }
 
@@ -69,38 +68,38 @@ public class Profesor {
         this.categoria = categoria;
     }
 
-    public String getUbicacion_oficina() {
-        return ubicacion_oficina;
+    public String getDepartamento() {
+        return departamento;
     }
 
-    public void setUbicacion_oficina(String ubicacion_oficina) {
-        this.ubicacion_oficina = ubicacion_oficina;
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
     }
 
-    public List<Estudiante> getEncargados() {
+    public ArrayList<Estudiante> getEncargados() {
         return encargados;
     }
 
-    public void setEncargados(List<Estudiante> encargados) {
+    public void setEncargados(ArrayList<Estudiante> encargados) {
         this.encargados = encargados;
     }
 
-    public List<Grupo> getGrupos_a_cargo() {
+    public ArrayList<Grupo> getGrupos_a_cargo() {
         return grupos_a_cargo;
     }
 
-    public void setGrupos_a_cargo(List<Grupo> grupos_a_cargo) {
+    public void setGrupos_a_cargo(ArrayList<Grupo> grupos_a_cargo) {
         this.grupos_a_cargo = grupos_a_cargo;
     }
 
     @Override
     public String toString() {
-        return "Mi nombre es" + nombre +
-                ", tengo estos titulos=" + titulos +
-                ", soy " + categoria +
-                ", la ubicación de mi oficina es " + ubicacion_oficina +
-                ", los estudiantes a mi cargo son " + encargados +
-                "y enseño en estos grupos " + grupos_a_cargo;
+        return "Mi nombre es" + this.getNombre() +
+                ", tengo estos titulos=" + this.getTitulos() +
+                ", soy " + this.getCategoria() +
+                ", la ubicación de mi oficina es " + this.getDepartamento() +
+                ", los estudiantes a mi cargo son " + this.getEncargados() +
+                "y enseño en estos grupos " + this.getGrupos_a_cargo();
     }
 }
 

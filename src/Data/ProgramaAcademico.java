@@ -7,7 +7,7 @@ public class ProgramaAcademico {
     private String estudios;
     private String nombre;
     private int semestres;
-    private ArrayList<Estudiante> estudiante;
+    private  ArrayList<Estudiante> estudiante;
 
     public ProgramaAcademico(String estudios, String nombre, int semestres, ArrayList<Estudiante> estudiante) {
         this.setEstudios(estudios);
@@ -58,10 +58,10 @@ public class ProgramaAcademico {
 
     @Override
     public String toString() {
-        return "El programa académico es " + estudios +
-                ", se llama " + nombre +
-                ", tiene una duración de " + semestres + " semestres" +
-                " lo cursan " + estudiante;
+        return "El programa académico es " + this.getEstudios() +
+                ", se llama " + this.getNombre() +
+                ", tiene una duración de " + this.getSemestres() + " semestres" +
+                " lo cursan " + this.getEstudiante();
     }
 }
 

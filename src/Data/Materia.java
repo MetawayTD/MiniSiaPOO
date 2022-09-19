@@ -6,9 +6,9 @@ public class Materia {
 
     private String nombre;
     private int numero_creditos;
-    private ArrayList<String> prerrequisitos;
-    private ArrayList<String> temas;
-    private ArrayList<Grupo> grupos;
+    private  ArrayList<String> prerrequisitos;
+    private  ArrayList<String> temas;
+    private  ArrayList<Grupo> grupos;
 
     public Materia(String nombre, int numero_creditos, ArrayList<String> prerrequisitos, ArrayList<String> temas, ArrayList<Grupo> grupos) {
         this.setNombre(nombre);
@@ -17,13 +17,12 @@ public class Materia {
         this.setTemas(temas);
         this.setGrupos(grupos);
     }
-    public Materia(String nombre, int numero_creditos, ArrayList<String> prerrequisitos,ArrayList<Grupo> grupos){
+    public Materia(String nombre, int numero_creditos, ArrayList<String> prerrequisitos, ArrayList<String> temas){
         this.setNombre(nombre);
         this.setNumero_creditos(numero_creditos);
         this.setPrerrequisitos(prerrequisitos);
-        this.setGrupos(grupos);
+        this.setTemas(temas);
     }
-
     public Materia(String nombre, int numero_creditos, ArrayList<String> prerrequisitos){
         this.setNombre(nombre);
         this.setNumero_creditos(numero_creditos);
@@ -73,10 +72,10 @@ public class Materia {
 
     @Override
     public String toString() {
-        return  "El nombre de esta materia es " + nombre +
-                ", cuenta con " + numero_creditos + "créditos"+
-                ", requiere se se hayan aprobado estas materias anteriormente " + prerrequisitos +
-                ", se veran los temas " + temas +
-                ", se enseña en los grupos " + grupos;
+        return  "El nombre de esta materia es " + this.getNombre() +
+                ", cuenta con " + this.getNumero_creditos() + "créditos"+
+                ", requiere se se hayan aprobado estas materias anteriormente " + this.getPrerrequisitos() +
+                ", se veran los temas " + this.getTemas() +
+                ", se enseña en los grupos " +this.getGrupos();
     }
 }

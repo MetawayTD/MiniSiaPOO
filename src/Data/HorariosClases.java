@@ -5,7 +5,7 @@ public class HorariosClases {
 
     private ArrayList<String> dias;
     private ArrayList<Integer>  horas;
-    private ArrayList<Grupo> grupos;
+    private  ArrayList<Grupo> grupos;
 
     public HorariosClases(ArrayList<String> dias,ArrayList<Integer> horas,ArrayList<Grupo> grupos) {
         this.setDias(dias);
@@ -47,9 +47,9 @@ public class HorariosClases {
 
     @Override
     public String toString() {
-        return "En este horario hay clases los dias " + dias+
-                ", a las " + horas +
-                "y corresponde a los grupos " + grupos;
+        return "En este horario hay clases los dias " + this.getDias()+
+                ", a las " + this.getHoras() +
+                "y corresponde a los grupos " + this.getGrupos();
     }
 }
 

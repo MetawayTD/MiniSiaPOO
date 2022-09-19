@@ -1,62 +1,69 @@
 package Logic;
 import Data.*;
 import UI.UI;
-
-import javax.swing.*;
 import java.util.ArrayList;
 
 public class MiniSia {
         public static void main(String[] args){
-                ArrayList<String> titulos_armando = new ArrayList<String>();
-                titulos_armando.add("Pregrado en matemáticas");
-                titulos_armando.add("Doctorado en matemáticas");
 
-                ArrayList<String> titulos_marta = new ArrayList<String>();
-                titulos_marta.add("Pregrado en ingenieria de sistemas");
-                titulos_marta.add("Especialización en redes de telecomunicaciones");
-                titulos_marta.add("Maestria en ciencias de la computación");
+                ArrayList<String> titulos_jose = new ArrayList<String>();
+                titulos_jose.add("Pregrado matemáticas");
+                titulos_jose.add("Maestria matemáticas");
 
-                ArrayList<String> prerrequisitos_lineal = new ArrayList<String>();
-                prerrequisitos_lineal.add("Matemáticas básicas");
-                prerrequisitos_lineal.add("Cálculo diferencial");
+                ArrayList<String> titulos_luis = new ArrayList<String>();
+                titulos_luis.add("Pregrado ingenieria de sistemas");
+                titulos_luis.add("Maestria redes telecomunicaciones");
 
-                ArrayList<String> prerrequisitos_poo = new ArrayList<String>();
-                prerrequisitos_poo.add("Introducción a la ingenieria de sistemas");
-                prerrequisitos_poo.add("Programación de computadores");
+                ArrayList<String> requisitos_lineal = new ArrayList<String>();
+                requisitos_lineal.add("Cálculo diferencial");
 
-                ArrayList<String> dias_horario1 = new ArrayList<String>();
-                dias_horario1.add("lubes");
-                dias_horario1.add("Miercoles");
+                ArrayList<String> requisitos_poo = new ArrayList<String>();
+                requisitos_poo.add("Programación de computadores");
 
-                ArrayList<String> dias_horario2 = new ArrayList<String>();
-                dias_horario1.add("Martes");
-                dias_horario1.add("Jueves");
+                ArrayList<String> dias_lunes = new ArrayList<String>();
+                dias_lunes.add("Lunes");
+                dias_lunes.add("Miercoles");
 
+                ArrayList<String> dias_martes = new ArrayList<String>();
+                dias_martes.add("Martes");
+                dias_martes.add("Jueves");
+                //------------------------------------------------------------------------------------------------------objetos
+                Estudiante pepito = new Estudiante("Pepito Rodriguez",1034657217,"pepito@unal.edu.co");
+                Estudiante ana = new Estudiante("Ana Martinez",1111111111,"ana@unal.edu.co");
 
+                Profesor jose = new Profesor("Jose Diaz","JoseD@unal.edu.co",titulos_jose);
+                Profesor luis = new Profesor("Luis Velasco","LuisV@unal.edu.co",titulos_luis);
 
-                Estudiante martin = new Estudiante("Martin Moreno Jara",1034657217,"mamorenoj@unal.edu.co","Cra 94B #42F-46SUR",
-                        3103017732L,"o+");
-                Estudiante gabriel = new Estudiante("Gabriel Fonseca Guerrero",1004558477,"gfonsecag@unal.edu.co");
+                Grupo grupo_lineal = new Grupo(15,4);
+                Grupo grupo_poo = new Grupo(5,4);
 
-                Profesor armando = new Profesor("Armando Reyes","Armando@unal.edu.co",titulos_armando,"Profesor de planta","FEM 303");
-                Profesor marta = new Profesor("Marta Villamil","Marta@unal.edu.co",titulos_marta);
+                Materia algebra_lineal = new Materia("Álgebra lineal",4,requisitos_lineal);
+                Materia poo = new Materia("Programación orientada a objetos",4,requisitos_poo);
 
-                Materia algebra_lineal = new Materia("Álgebra lineal",4,prerrequisitos_lineal);
-                Materia proramacion_orientada_a_objetos = new Materia("Programación orientada a objetos",4,prerrequisitos_poo);
+                ProgramaAcademico ing_sistemas = new ProgramaAcademico("Pregrado","Ingenieria de sistemas y computación");
+                ProgramaAcademico ing_mecatrónica = new ProgramaAcademico("Pregrado","Ingenieria mecatrónica");
 
-                Grupo grupo1 = new Grupo(10,4,algebra_lineal);
-                Grupo grupo2 = new Grupo(15,4,proramacion_orientada_a_objetos);
+                InformacionFinanciera pagado = new InformacionFinanciera("Al dia");
+                InformacionFinanciera moroso = new InformacionFinanciera("Atrasado");
 
-                HorariosClases horario1 = new HorariosClases(dias_horario1);
-                HorariosClases horario2 = new HorariosClases(dias_horario2);
+                HorariosClases lunes_miercoles = new HorariosClases(dias_lunes);
+                HorariosClases martes_jueves = new HorariosClases(dias_martes);
+                //------------------------------------------------------------------------------------------------------terminar estudiantes
+                pepito.setPrograma_academico(ing_sistemas);
+                pepito.setTutor(jose);
+                pepito.setInfo_financiera(pagado);
 
-                ProgramaAcademico ingenieria_de_sistemas = new ProgramaAcademico("Pregrado","Ingenieria de sistemas");
-                ProgramaAcademico ingenieria_industrial = new ProgramaAcademico("Pregrado","Ingenieria industrial");
+                ana.setPrograma_academico(ing_mecatrónica);
+                ana.setTutor(luis);
+                ana.setInfo_financiera(moroso);
+                //------------------------------------------------------------------------------------------------------terminar grupos
+                grupo_lineal.setMateria(algebra_lineal);
+                grupo_lineal.setProfesor(jose);
+                grupo_lineal.setHorario(lunes_miercoles);
 
-                InformacionFinanciera info1 = new InformacionFinanciera(martin);
-                InformacionFinanciera info2 = new InformacionFinanciera(gabriel);
-
-                
+                grupo_poo.setMateria(poo);
+                grupo_poo.setProfesor(luis);
+                grupo_poo.setHorario(martes_jueves);
 
                 UI.bienvedida();
                 UI.menu();
@@ -64,25 +71,25 @@ public class MiniSia {
 
                 switch (seleccion){
                         case 1:
-                                UI.Imprimir_estudiantes(martin,gabriel);
+                                UI.Imprimir_estudiantes(pepito,ana);
                                 break;
                         case 2:
-                                UI.Imprimir_profesores(armando,marta);
+                                UI.Imprimir_profesores(jose,luis);
                                 break;
                         case 3:
-                                UI.Imprimir_grupos(grupo1,grupo2);
+                                UI.Imprimir_grupos(grupo_lineal,grupo_poo);
                                 break;
                         case 4:
-                                UI.Imprimir_materias(algebra_lineal,proramacion_orientada_a_objetos);
+                                UI.Imprimir_materias(algebra_lineal,poo);
                                 break;
                         case 5:
-                                UI.Imprimir_programa_acamademico(ingenieria_de_sistemas,ingenieria_industrial);
+                                UI.Imprimir_programa_acamademico(ing_sistemas,ing_mecatrónica);
                                 break;
                         case 6:
-                                UI.Imprimir_horarios(horario1,horario2);
+                                UI.Imprimir_horarios(lunes_miercoles,martes_jueves);
                                 break;
                         case 7:
-                                UI.Imprimir_info_financiera(info1,info2);
+                                UI.Imprimir_info_financiera(pagado,moroso);
                                 break;
                         default:
                                 UI.error();
@@ -90,4 +97,3 @@ public class MiniSia {
         }
 
 }
-

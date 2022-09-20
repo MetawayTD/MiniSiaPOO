@@ -114,7 +114,16 @@ public class Estudiante {
     public void setInfo_financiera(InformacionFinanciera info_financiera) {
         this.info_financiera = info_financiera;
     }
-    
+
+    public ArrayList<Integer> getNumeroGrupo (ArrayList<Grupo> a){
+        ArrayList<Integer> numerogrupos = new ArrayList<Integer>();
+        for(Grupo i:a){
+            Grupo losgrupos = i;
+            numerogrupos.add(losgrupos.getNumero());
+        }
+        return numerogrupos;
+    }
+
     @Override
     public String toString() {
         return "---------------------------------------------------------------"+
@@ -124,7 +133,7 @@ public class Estudiante {
                 "\n\tmi numero_telefono es " + this.getNumero_telefono() +
                 "\n\testoy estudiando " + this.programa_academico.getEstudios() + " en " + this.programa_academico.getNombre() +
                 "\n\tmi tutor es " + this.tutor.getNombre() +
-                "\n\tpertenezco a los grupos " + this.grupos +
+                "\n\tpertenezco a los grupos " + this.getNumeroGrupo(grupos) +
                 "\n\tmi estado financiero es " + this.info_financiera.getEstado_cuenta() +
                 "\n";
     }

@@ -1,4 +1,5 @@
 package Data;
+import javax.crypto.AEADBadTagException;
 import java.util.ArrayList;
 
 public class Estudiante {
@@ -94,7 +95,7 @@ public class Estudiante {
         return tutor;
     }
 
-        public void setTutor(Profesor tutor) {
+    public void setTutor(Profesor tutor) {
             this.tutor = tutor;
     }
 
@@ -114,6 +115,15 @@ public class Estudiante {
         this.info_financiera = info_financiera;
     }
 
+    public ArrayList<Integer> getNumeroGrupo (ArrayList<Grupo> a){
+        ArrayList<Integer> numerogrupos = new ArrayList<Integer>();
+        for(Grupo i:a){
+            Grupo losgrupos = i;
+            numerogrupos.add(losgrupos.getNumero());
+        }
+        return numerogrupos;
+
+    }
 
     @Override
     public String toString() {
@@ -124,7 +134,7 @@ public class Estudiante {
                 "\n\tmi numero_telefono es " + this.getNumero_telefono() +
                 "\n\testoy estudiando " + this.programa_academico.getEstudios() + " en " + this.programa_academico.getNombre() +
                 "\n\tmi tutor es " + this.tutor.getNombre() +
-                "\n\tpertenezco a los grupos " + this.getGrupos() +
+                "\n\tpertenezco a los grupos " + this.getNumeroGrupo(grupos) +
                 "\n\tmi estado financiero es " + this.info_financiera.getEstado_cuenta() +
                 "\n";
     }

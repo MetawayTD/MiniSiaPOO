@@ -79,6 +79,7 @@ public class Grupo {
         this.horario = horario;
     }
 
+
     @Override
     public String toString() {
         return "---------------------------------------------------------------"+

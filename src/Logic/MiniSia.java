@@ -48,14 +48,24 @@ public class MiniSia {
 
                 HorariosClases lunes_miercoles = new HorariosClases(dias_lunes);
                 HorariosClases martes_jueves = new HorariosClases(dias_martes);
+                //------------------------------------------------------------------------------------------------------
+                ArrayList<Grupo> grupos = new ArrayList<Grupo>();
+                grupos.add(grupo_lineal);
+                grupos.add(grupo_poo);
                 //------------------------------------------------------------------------------------------------------terminar estudiantes
                 pepito.setPrograma_academico(ing_sistemas);
                 pepito.setTutor(jose);
                 pepito.setInfo_financiera(pagado);
+                pepito.setDireccion("CRA 94B #42F-46SUR");
+                pepito.setNumero_telefono(3103107732l);
+                pepito.setGrupo(grupos);
 
                 ana.setPrograma_academico(ing_mecatrónica);
                 ana.setTutor(luis);
                 ana.setInfo_financiera(moroso);
+                ana.setDireccion("CALLE 100 #55-40");
+                ana.setNumero_telefono(3148000554l);
+                ana.setGrupo(grupos);
                 //------------------------------------------------------------------------------------------------------terminar grupos
                 grupo_lineal.setMateria(algebra_lineal);
                 grupo_lineal.setProfesor(jose);

@@ -45,12 +45,24 @@ public class HorariosClases {
         this.grupos = grupos;
     }
 
+    public ArrayList<Integer> getNumerosGrupos(){
+        ArrayList<Integer> numeros = new ArrayList<>();
+        if(getGrupos()!=null) {
+            for (int i = 0; i < this.getGrupos().size(); i++) {
+                numeros.add(this.getGrupos().get(i).getNumero());
+            }
+            return numeros;
+        }
+        return null;
+    }
+
+
     @Override
     public String toString() {
         return "---------------------------------------------------------------"+
                 "\n\tEn este horario hay clases los dias " + this.getDias()+
                 "\n\tA estas horas " + this.getHoras() +
-                "\n\tCorresponde a los grupos " + this.getGrupos();
+                "\n\tCorresponde a los grupos " + this.getNumerosGrupos();
     }
 }
 

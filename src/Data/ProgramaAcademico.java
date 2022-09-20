@@ -56,13 +56,24 @@ public class ProgramaAcademico {
         this.estudiante = estudiante;
     }
 
+    public ArrayList<String> getNombreEstudiantes(){
+        ArrayList<String> nombres = new ArrayList<>();
+        if(getEstudiante()!=null) {
+            for (int i = 0; i < this.getEstudiante().size(); i++) {
+                nombres.add(this.getEstudiante().get(i).getNombre());
+            }
+            return nombres;
+        }
+        return null;
+    }
+
     @Override
     public String toString() {
         return "---------------------------------------------------------------"+
                 "\n\tEl programa académico es " + this.getEstudios() +
                 "\n\tSu nombre es " + this.getNombre() +
                 "\n\tTiene una duración de " + this.getSemestres() + " semestres " +
-                "\n\tLo cursan " + this.getEstudiante();
+                "\n\tLo cursan " + this.getNombreEstudiantes();
     }
 }
 

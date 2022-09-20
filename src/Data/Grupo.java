@@ -79,6 +79,17 @@ public class Grupo {
         this.horario = horario;
     }
 
+    public ArrayList<String> getnombresEstudiantes(){
+        ArrayList<String> nombres = new ArrayList<>();
+        if(getLista_estudiantes()!=null) {
+            for (int i = 0; i < this.getLista_estudiantes().size(); i++) {
+                nombres.add(this.getLista_estudiantes().get(i).getNombre());
+            }
+            return nombres;
+        }
+        return null;
+    }
+
 
     @Override
     public String toString() {
@@ -86,7 +97,7 @@ public class Grupo {
                 "\n\tEl numero del grupo es " + this.getNumero() +
                 "\n\trequiere " + this.getCargaHoraria() + " horas a la semana " +
                 "\n\tcorresponde a la materia de " + this.materia.getNombre() +
-                "\n\tEsta formado por estos estudiantes " + this.getLista_estudiantes() +
+                "\n\tEsta formado por estos estudiantes " + this.getnombresEstudiantes() +
                 "\n\tEl docente encargado del grupo es " + this.profesor.getNombre() +
                 "\n\tSu horario es en los dias " + this.horario.getDias() + " a las " + this.horario.getHoras();
 

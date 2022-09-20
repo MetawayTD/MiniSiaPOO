@@ -118,7 +118,7 @@ public class Estudiante {
     public ArrayList<Integer> getNumerosGrupos(){
         ArrayList<Integer> numeros = new ArrayList<>();
         if(getGrupos()!=null) {
-            for (int i = 0; i < 2; i++) {
+            for (int i = 0; i < this.getGrupos().size(); i++) {
                 numeros.add(this.getGrupos().get(i).getNumero());
             }
             return numeros;

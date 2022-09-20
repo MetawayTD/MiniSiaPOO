@@ -70,6 +70,18 @@ public class Materia {
         this.grupos = grupos;
     }
 
+    public ArrayList<Integer> getNumerosGrupos(){
+        ArrayList<Integer> numeros = new ArrayList<>();
+        if(getGrupos()!=null) {
+            for (int i = 0; i < this.getGrupos().size(); i++) {
+                numeros.add(this.getGrupos().get(i).getNumero());
+            }
+            return numeros;
+        }
+        return null;
+    }
+
+
     @Override
     public String toString() {
         return  "---------------------------------------------------------------"+
@@ -77,6 +89,6 @@ public class Materia {
                 "\n\tCuenta con " + this.getNumero_creditos() + " créditos "+
                 "\n\tRequiere se se hayan aprobado estas materias anteriormente " + this.getPrerrequisitos() +
                 "\n\tSe veran los temas " + this.getTemas() +
-                "\n\tSe enseña en los grupos " +this.getGrupos();
+                "\n\tSe enseña en los grupos " +this.getNumerosGrupos();
     }
 }

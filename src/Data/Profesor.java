@@ -92,6 +92,28 @@ public class Profesor {
         this.grupos_a_cargo = grupos_a_cargo;
     }
 
+    public ArrayList<String> getnombresEncargados(){
+        ArrayList<String> nombres = new ArrayList<>();
+        if(getEncargados()!=null) {
+            for (int i = 0; i < this.getEncargados().size(); i++) {
+                nombres.add(this.getEncargados().get(i).getNombre());
+            }
+            return nombres;
+        }
+        return null;
+    }
+
+    public ArrayList<Integer> getNumerosGruposACargo(){
+        ArrayList<Integer> numeros = new ArrayList<>();
+        if(getGrupos_a_cargo()!=null) {
+            for (int i = 0; i < this.getGrupos_a_cargo().size(); i++) {
+                numeros.add(this.getGrupos_a_cargo().get(i).getNumero());
+            }
+            return numeros;
+        }
+        return null;
+    }
+
     @Override
     public String toString() {
         return "---------------------------------------------------------------"+
@@ -99,8 +121,8 @@ public class Profesor {
                 "\n\tTengo estos titulos " + this.getTitulos() +
                 "\n\tSoy " + this.getCategoria() +
                 "\n\tPertenezco al departamento de " + this.getDepartamento() +
-                "\n\tLos estudiantes a mi cargo son " + this.getEncargados() +
-                "\n\tEnseño en estos grupos " + this.getGrupos_a_cargo();
+                "\n\tLos estudiantes a mi cargo son " + this.getnombresEncargados() +
+                "\n\tEnseño en estos grupos " + this.getNumerosGruposACargo();
     }
 }
 

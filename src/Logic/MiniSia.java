@@ -57,15 +57,13 @@ public class MiniSia {
                 pepito.setTutor(jose);
                 pepito.setInfo_financiera(pagado);
                 pepito.setDireccion("CRA 94B #42F-46SUR");
-                pepito.setNumero_telefono(3103107732l);
-                pepito.setGrupo(grupos);
+                pepito.setNumero_telefono(3103107732l);;
 
                 ana.setPrograma_academico(ing_mecatrónica);
                 ana.setTutor(luis);
                 ana.setInfo_financiera(moroso);
                 ana.setDireccion("CALLE 100 #55-40");
                 ana.setNumero_telefono(3148000554l);
-                ana.setGrupo(grupos);
                 //------------------------------------------------------------------------------------------------------terminar grupos
                 grupo_lineal.setMateria(algebra_lineal);
                 grupo_lineal.setProfesor(jose);
@@ -74,6 +72,12 @@ public class MiniSia {
                 grupo_poo.setMateria(poo);
                 grupo_poo.setProfesor(luis);
                 grupo_poo.setHorario(martes_jueves);
+                //------------------------------------------------------------------------------------------------------terminar profes
+                jose.setCategoria("Profesor de planta");
+                jose.setDepartamento("Matemáticas");
+
+                luis.setCategoria("Profesor vecario");
+                luis.setDepartamento("Ingeniera de sistemas e industrial");
 
                 UI.bienvedida();
                 UI.menu();

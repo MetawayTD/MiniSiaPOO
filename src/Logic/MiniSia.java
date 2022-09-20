@@ -78,6 +78,36 @@ public class MiniSia {
 
                 luis.setCategoria("Profesor vecario");
                 luis.setDepartamento("Ingeniera de sistemas e industrial");
+                //------------------------------------------------------------------------------------------------------
+                ArrayList<String> horas = new ArrayList<>();
+                horas.add("9am-11am");
+                //------------------------------------------------------------------------------------------------------terminar horarios
+                ArrayList<String> temas_lineal = new ArrayList<>();
+                temas_lineal.add("Matrices");
+                temas_lineal.add("Vectores");
+                temas_lineal.add("Espacios vectoriales");
+
+                ArrayList<String> temas_poo = new ArrayList<>();
+                temas_poo.add("Objetos");
+                temas_poo.add("Relaciones entre objetos");
+                temas_poo.add("GUI");
+                //------------------------------------------------------------------------------------------------------completar materias
+                algebra_lineal.setTemas(temas_lineal);
+
+                poo.setTemas(temas_poo);
+                //------------------------------------------------------------------------------------------------------completar programa
+                ing_sistemas.setSemestres(10);
+
+                ing_mecatrónica.setSemestres(10);
+                //-------------------------------------------------------------------------------------------------------completar infofinanciera
+                pagado.setPeriodo_academico("2022-2");
+                pagado.setEstudiante(pepito);
+
+                moroso.setPeriodo_academico("2022-2");
+                moroso.setEstudiante(ana);
+                //-----------------------------------------------------------------------------------------------------------
+                lunes_miercoles.setHoras(horas);
+                martes_jueves.setHoras(horas);
 
                 UI.bienvedida();
                 UI.menu();

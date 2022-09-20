@@ -4,15 +4,15 @@ import java.util.ArrayList;
 public class HorariosClases {
 
     private ArrayList<String> dias;
-    private ArrayList<Integer>  horas;
+    private ArrayList<String>  horas;
     private  ArrayList<Grupo> grupos;
 
-    public HorariosClases(ArrayList<String> dias,ArrayList<Integer> horas,ArrayList<Grupo> grupos) {
+    public HorariosClases(ArrayList<String> dias,ArrayList<String> horas,ArrayList<Grupo> grupos) {
         this.setDias(dias);
         this.setHoras(horas);
         this.setGrupos(grupos);
     }
-    public HorariosClases(ArrayList<String> dias,ArrayList<Integer> horas){
+    public HorariosClases(ArrayList<String> dias,ArrayList<String> horas){
         this.setDias(dias);
         this.setHoras(horas);
     }
@@ -29,11 +29,11 @@ public class HorariosClases {
         this.dias = dias;
     }
 
-    public ArrayList<Integer>  getHoras() {
+    public ArrayList<String>  getHoras() {
         return horas;
     }
 
-    public void setHoras(ArrayList<Integer>  horas) {
+    public void setHoras(ArrayList<String>  horas) {
         this.horas = horas;
     }
 

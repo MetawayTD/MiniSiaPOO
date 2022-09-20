@@ -50,6 +50,6 @@ public class InformacionFinanciera {
         return  "---------------------------------------------------------------"+
                 "\n\tEl estado financiero es " + this.getEstado_cuenta() +
                 "\n\tEsta información corresponde al periodo_academico " + this.getPeriodo_academico() +
-                "\n\tCorresponde al estudiante " + this.getEstudiante();
+                "\n\tCorresponde al estudiante " + this.getEstudiante().getNombre();
     }
 }

@@ -72,10 +72,11 @@ public class Materia {
 
     @Override
     public String toString() {
-        return  "El nombre de esta materia es " + this.getNombre() +
-                ", cuenta con " + this.getNumero_creditos() + "créditos"+
-                ", requiere se se hayan aprobado estas materias anteriormente " + this.getPrerrequisitos() +
-                ", se veran los temas " + this.getTemas() +
-                ", se enseña en los grupos " +this.getGrupos();
+        return  "---------------------------------------------------------------"+
+                "\n\tEl nombre de esta materia es " + this.getNombre() +
+                "\n\tCuenta con " + this.getNumero_creditos() + " créditos "+
+                "\n\tRequiere se se hayan aprobado estas materias anteriormente " + this.getPrerrequisitos() +
+                "\n\tSe veran los temas " + this.getTemas() +
+                "\n\tSe enseña en los grupos " +this.getGrupos();
     }
 }

@@ -47,8 +47,9 @@ public class InformacionFinanciera {
 
     @Override
     public String toString() {
-        return  "Esta información corresponde al periodo_academico '" + this.getPeriodo_academico() +
-                ", el estado financiero es " + this.getEstado_cuenta() +
-                ", que corresponde al estudiante " + this.getEstudiante();
+        return  "---------------------------------------------------------------"+
+                "\n\tEl estado financiero es " + this.getEstado_cuenta() +
+                "\n\tEsta información corresponde al periodo_academico " + this.getPeriodo_academico() +
+                "\n\tCorresponde al estudiante " + this.getEstudiante();
     }
 }

@@ -7,8 +7,13 @@ public class UI {
         System.out.println("Bienvenid@ al SIA\n");
     }
     public static void menu(){
-        System.out.println("¿Que información deseas ver?: \n1 para información de los estudiantes\n2 para información de los profesores\n" +
-                "3 para información de los grupos\n4 para información de las materas\n5 para información del programa académico\n6 para información de los horarios" +
+        System.out.println("¿Que información deseas ver?: " +
+                "\n1 para información de los estudiantes" +
+                "\n2 para información de los profesores" +
+                "\n3 para información de los grupos" +
+                "\n4 para información de las materias" +
+                "\n5 para información del programa académico" +
+                "\n6 para información de los horarios" +
                 "\n7 para información del estatus financiero");
     }
     public static void error(){

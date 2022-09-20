@@ -117,12 +117,15 @@ public class Estudiante {
 
     @Override
     public String toString() {
-        return "mi nombre es " + this.getNombre() + ", mi documento de identidad es " + this.getDocumento() +
-                ", mi direccion es " + this.getDireccion() +
-                ", mi numero_telefono es " + this.getNumero_telefono() +
-                ", estoy estudiando " + this.programa_academico.getEstudios() + "en " + this.programa_academico.getNombre() +
-                ", mi tutor es" + this.tutor.getNombre() +
-                ", pertenezco a los grupos " + this.getGrupos() +
-                ", y mi estado financiero es " + this.info_financiera.getEstado_cuenta();
+        return "---------------------------------------------------------------"+
+                "\n\tmi nombre es " + this.getNombre() +
+                "\n\tmi documento de identidad es " + this.getDocumento() +
+                "\n\tmi direccion es " + this.getDireccion() +
+                "\n\tmi numero_telefono es " + this.getNumero_telefono() +
+                "\n\testoy estudiando " + this.programa_academico.getEstudios() + " en " + this.programa_academico.getNombre() +
+                "\n\tmi tutor es " + this.tutor.getNombre() +
+                "\n\tpertenezco a los grupos " + this.getGrupos() +
+                "\n\tmi estado financiero es " + this.info_financiera.getEstado_cuenta() +
+                "\n";
     }
 }

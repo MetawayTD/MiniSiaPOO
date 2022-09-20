@@ -47,9 +47,10 @@ public class HorariosClases {
 
     @Override
     public String toString() {
-        return "En este horario hay clases los dias " + this.getDias()+
-                ", a las " + this.getHoras() +
-                "y corresponde a los grupos " + this.getGrupos();
+        return "---------------------------------------------------------------"+
+                "\n\tEn este horario hay clases los dias " + this.getDias()+
+                "\n\tA estas horas " + this.getHoras() +
+                "\n\tCorresponde a los grupos " + this.getGrupos();
     }
 }
 

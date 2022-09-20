@@ -94,12 +94,13 @@ public class Profesor {
 
     @Override
     public String toString() {
-        return "Mi nombre es" + this.getNombre() +
-                ", tengo estos titulos=" + this.getTitulos() +
-                ", soy " + this.getCategoria() +
-                ", la ubicación de mi oficina es " + this.getDepartamento() +
-                ", los estudiantes a mi cargo son " + this.getEncargados() +
-                "y enseño en estos grupos " + this.getGrupos_a_cargo();
+        return "---------------------------------------------------------------"+
+                "\n\tMi nombre es " + this.getNombre() +
+                "\n\tTengo estos titulos " + this.getTitulos() +
+                "\n\tSoy " + this.getCategoria() +
+                "\n\tPertenezco al departamento de " + this.getDepartamento() +
+                "\n\tLos estudiantes a mi cargo son " + this.getEncargados() +
+                "\n\tEnseño en estos grupos " + this.getGrupos_a_cargo();
     }
 }
 

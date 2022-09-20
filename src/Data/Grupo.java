@@ -81,12 +81,13 @@ public class Grupo {
 
     @Override
     public String toString() {
-        return "El numero del grupo es " + this.getNumero() +
-                ", requiere " + this.getCargaHoraria() + "a la semana" +
-                ", corresponde a la materia de " + this.materia.getNombre() +
-                ", Esta formado por estos estudiantes " + this.getLista_estudiantes() +
-                ", el docente encargado del grupo es " + this.profesor.getNombre() +
-                " y su horario es en los dias " + this.horario.getDias() + "a las " + this.horario.getHoras();
+        return "---------------------------------------------------------------"+
+                "\n\tEl numero del grupo es " + this.getNumero() +
+                "\n\trequiere " + this.getCargaHoraria() + " horas a la semana " +
+                "\n\tcorresponde a la materia de " + this.materia.getNombre() +
+                "\n\tEsta formado por estos estudiantes " + this.getLista_estudiantes() +
+                "\n\tEl docente encargado del grupo es " + this.profesor.getNombre() +
+                "\n\tSu horario es en los dias " + this.horario.getDias() + " a las " + this.horario.getHoras();
 
     }
 }

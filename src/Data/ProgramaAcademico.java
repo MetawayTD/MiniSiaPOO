@@ -58,10 +58,11 @@ public class ProgramaAcademico {
 
     @Override
     public String toString() {
-        return "El programa académico es " + this.getEstudios() +
-                ", se llama " + this.getNombre() +
-                ", tiene una duración de " + this.getSemestres() + " semestres" +
-                " lo cursan " + this.getEstudiante();
+        return "---------------------------------------------------------------"+
+                "\n\tEl programa académico es " + this.getEstudios() +
+                "\n\tSu nombre es " + this.getNombre() +
+                "\n\tTiene una duración de " + this.getSemestres() + " semestres " +
+                "\n\tLo cursan " + this.getEstudiante();
     }
 }
 

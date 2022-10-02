@@ -41,10 +41,10 @@ public class MiniSia {
                 Materia algebra_lineal = new Materia("Álgebra lineal",4,requisitos_lineal);
                 Materia poo = new Materia("Programación orientada a objetos",4,requisitos_poo);
 
-                ProgramaAcademico ing_sistemas = new ProgramaAcademico("Pregrado","Ingenieria de sistemas y computación");
+                ProgramaAcademico ing_sistemas = new ProgramaAcademico("Pregrado","Ingenieria de sistemas y computación",10);
                 ProgramaAcademico ing_mecatrónica = new ProgramaAcademico("Pregrado","Ingenieria mecatrónica");
 
-                InformacionFinanciera pagado = new InformacionFinanciera("Al dia");
+                InformacionFinanciera pagado = new InformacionFinanciera("Al dia","2022-2");
                 InformacionFinanciera moroso = new InformacionFinanciera("Atrasado");
 
                 HorariosClases lunes_miercoles = new HorariosClases(dias_lunes);
@@ -127,16 +127,13 @@ public class MiniSia {
 
                 poo.setTemas(temas_poo);
                 poo.setGrupos(grupos_materia_poo);
-                //------------------------------------------------------------------------------------------------------
 
                 //------------------------------------------------------------------------------------------------------completar programa
-                ing_sistemas.setSemestres(10);
                 ing_sistemas.setEstudiante(encargado_jose);
 
                 ing_mecatrónica.setSemestres(10);
                 ing_mecatrónica.setEstudiante(encargado_luis);
                 //-------------------------------------------------------------------------------------------------------completar infofinanciera
-                pagado.setPeriodo_academico("2022-2");
                 pagado.setEstudiante(pepito);
 
                 moroso.setPeriodo_academico("2022-2");

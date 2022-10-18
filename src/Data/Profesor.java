@@ -92,7 +92,7 @@ public class Profesor {
         this.grupos_a_cargo = grupos_a_cargo;
     }
 
-    public ArrayList<String> getnombresEncargados(){
+    public ArrayList<String> getNombresEncargados(){
         ArrayList<String> nombres = new ArrayList<>();
         if(getEncargados()!=null) {
             for (int i = 0; i < this.getEncargados().size(); i++) {
@@ -121,7 +121,7 @@ public class Profesor {
                 "\n\tTengo estos titulos " + this.getTitulos() +
                 "\n\tSoy " + this.getCategoria() +
                 "\n\tPertenezco al departamento de " + this.getDepartamento() +
-                "\n\tLos estudiantes a mi cargo son " + this.getnombresEncargados() +
+                "\n\tLos estudiantes a mi cargo son " + this.getNombresEncargados() +
                 "\n\tEnseño en estos grupos " + this.getNumerosGruposACargo();
     }
 }
